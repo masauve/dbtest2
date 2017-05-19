@@ -1,2 +1,1 @@
-header("Location: dbtest.php");
-die();
+<meta http-equiv="refresh" content="0;url=dbtest.php">
