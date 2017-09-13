@@ -22,9 +22,7 @@ $query = "SELECT * from users" or die("Error in the consult.." . mysqli_error($c
 <?php
 $rs = $connection->query($query);
 while ($row = mysqli_fetch_assoc($rs)) {
-    echo "User Id: ".$row['user_id'] . " User Name: " . $row['username'] . "<br>";
-
-}
+  
 ?>
 
 <tr>
@@ -38,6 +36,7 @@ while ($row = mysqli_fetch_assoc($rs)) {
 
 
 <?php
+}
 mysqli_close($connection);
 
 ?>
