@@ -4,12 +4,12 @@ $dbport = getenv("MYSQL_SERVICE_PORT");
 $dbuser = getenv("MYSQL_USER");
 $dbname = getenv("MYSQL_DATABASE");
 $dbpwd = getenv("MYSQL_PASSWORD");
- 
+
 $connection = mysqli_connect($dbhost.":".$dbport, $dbuser, $dbpwd, $dbname) or die("Error " . mysqli_error($connection));
 $query = "SELECT * from users" or die("Error in the consult.." . mysqli_error($connection));
 ?>
 
-<table border="1" cellspacing="2" cellpadding="2">
+<table border="10" cellspacing="20" cellpadding="2">
 <tr>
 <td>
 <font face="Arial, Helvetica, sans-serif">User ID</font>
