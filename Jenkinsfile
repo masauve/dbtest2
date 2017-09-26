@@ -27,6 +27,6 @@ node {
 node {
   stage 'deployInTesting'
   openshiftTag(namespace: 'db-dev', sourceStream: 'myapp',  sourceTag: 'latest', destinationNamespace: 'db-dev',  destinationStream: 'myapp', destinationTag: 'promoteToQA')
-  openshiftDeploy(namespace: 'db-test', deploymentConfig: 'myapp')
-  openshiftScale(namespace: 'db-test', deploymentConfig: 'myapp',replicaCount: '3')
+  openshiftDeploy(namespace: 'db-qa', deploymentConfig: 'myapp')
+  openshiftScale(namespace: 'db-qa', deploymentConfig: 'myapp',replicaCount: '3')
 }
