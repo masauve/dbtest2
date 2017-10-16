@@ -9,7 +9,7 @@ $connection = mysqli_connect($dbhost.":".$dbport, $dbuser, $dbpwd, $dbname) or d
 $query = "SELECT * from users" or die("Error in the consult.." . mysqli_error($connection));
 ?>
 
-<table border="100" cellspacing="100" cellpadding="2">
+<table border="5" cellspacing="100" cellpadding="2">
 <tr>
 <td>
 <font face="Arial, Helvetica, sans-serif">ID</font>
