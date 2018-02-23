@@ -1,11 +1,10 @@
 <?php
-$dbhost = getenv("MYSQL_SERVICE_HOST");
-$dbport = getenv("MYSQL_SERVICE_PORT");
-$dbuser = getenv("MYSQL_USER");
-$dbname = getenv("MYSQL_DATABASE");
-$dbpwd = getenv("MYSQL_PASSWORD");
+$dbhost = getenv("uri");
+$dbuser = getenv("username");
+$dbname = getenv("database_name");
+$dbpwd = getenv("password");
 
-$connection = mysqli_connect($dbhost.":".$dbport, $dbuser, $dbpwd, $dbname) or die("Error " . mysqli_error($connection));
+$connection = mysqli_connect($dbhost, $dbuser, $dbpwd, $dbname) or die("Error " . mysqli_error($connection));
 $query = "SELECT * from users" or die("Error in the consult.." . mysqli_error($connection));
 ?>
 
